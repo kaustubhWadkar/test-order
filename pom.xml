@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.28</version> <!-- Update to latest Lombok version -->
+			<version>1.18.16</version> <!-- Updated to a stable version for Java 8 -->
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -58,10 +58,7 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<compilerArgs>
-						<arg>--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-						<arg>--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-					</compilerArgs>
+					<!-- Remove compilerArgs to avoid errors with Java 8 -->
 				</configuration>
 			</plugin>
 		</plugins>
